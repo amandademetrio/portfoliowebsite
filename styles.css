@@ -7,73 +7,187 @@
 }
 
 div.container {
-    width: 900px;
-    min-height: 900px;
+    width: 100%;
     margin: 10px;
 }
 
 div.header {
-    width: 900px;
-    height: 60px;
+    width: 100%;
     background-color: lightgray;
 }
 
-    div.header h1 {
-        display: inline-block;
-        color: black;
-        padding: 5px;
-        padding-left: 25px;
-        font-family: "Comic Sans MS", cursive, sans-serif;
-        font-size: x-large;
+    /*H1 and H3 header treatment for PHONE specifications*/
+
+    @media screen and (max-width:480px) {
+        div.header h1 {
+            display: inline-block;
+            color: black;
+            width: 100%;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: x-large;
+            padding: 5px 0px 5px 10px;
+            vertical-align: top;
+            text-align: center;
+        }
+
+        div.header h3 {
+            display: none;
+        }
     }
 
-    div.header h3 {
-        display: inline-block;
-        color: black;
-        padding-left: 345px;
-        font-family: Impact, fantasy;
+    /*H1 and H3 header treatment for TABLET specifications*/
+    
+    @media screen and (min-width:481px) {
+        div.header h1 {
+            display: inline-block;
+            color: black;
+            width: 100%;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: x-large;
+            padding: 5px 0px 5px 10px;
+            vertical-align: top;
+            text-align: center;
+        }
+
+        div.header h3 {
+            display: none;
+        }
+    }
+
+    /*H1 and H3 header treatment for DESKTOP specifications*/
+    
+    @media screen and (min-width:1024px) {
+        div.header h1 {
+            display: inline-block;
+            color: black;
+            width: 30%;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: x-large;
+            padding: 5px 0px 5px 10px;
+            vertical-align: top;
+        }
+
+        div.header h3 {
+            display: inline-block;
+            color: black;
+            width: 65%;
+            text-align: right;
+            font-family: Impact, fantasy;
+            vertical-align: top;
+        }
     }
 
 div.main_content {
-    width: 900px;
-    height: 780px;
+    width: 96%;
+    padding: 2%;
     background: radial-gradient(#6F5964, #48353D);
 }
 
+/*First row behavior in different screens*/
+
+/*PHONE*/
+
+@media screen and (max-width:480px) {
     div.first_row img {
-        width: 400px;
-        margin: 20px;
+        width: 93%;
         border: 5px solid #C0C0C0;
-        display: inline-block;
+        display: block;
+        margin-bottom: 2%;
     }
 
     div.first_row div.horizontal_pink_box {
         background-color: #E3D8E3;
-        width: 420px;
+        width: 95%;
         min-height: 273px;
-        margin-top: 20px;
-        display: inline-block;
-        vertical-align: top;
+        display: block;
+        padding-bottom: 2%;
+    }
+}
+
+/*TABLET*/
+
+@media screen and (min-width:481px) {
+    div.first_row img {
+        display: none;
     }
 
+    div.first_row div.horizontal_pink_box {
+        background-color: #E3D8E3;
+        width: 99%;
+        display: block;
+        padding-bottom: 2%;
+        margin-right: 3%;
+    }
+}
+
+/*DESKTOP*/
+
+@media screen and (min-width:1024px) {
+    div.first_row img {
+        width: 40%;
+        border: 5px solid #C0C0C0;
+        display: inline-block;
+        margin-bottom: 1%;
+        height: 305px;
+    }
+
+    div.first_row div.horizontal_pink_box {
+        background-color: #E3D8E3;
+        width: 50%;
+        min-height: 273px;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 2%;
+    }
+}
+
     .horizontal_main_title {
-        width: 420px;
+        width: 100%;
         background: linear-gradient(rgb(104, 102, 102), lightgray);
         height: 50px;
         font-family: "Trebuchet MS", Helvetica, sans-serif;
         font-size: large;
     }
 
+/*Second row behavior for different scren sizes*/
+
+/*PHONE*/
+
+@media screen and (max-width:480px) {
     div.second_row div.vertical_pink_box {
         background-color: #E3D8E3;
-        width: 255px;
-        height: 400px;
-        display: inline-block;
-        margin: 20px;
+        width: 96%;
+        display: block;
+        margin-top: 2%;
+        padding-bottom: 5%;
     }
+}
+
+/*TABLET*/
+    
+@media screen and (min-width:481px) {
+    div.second_row div.vertical_pink_box {
+        background-color: #E3D8E3;
+        width: 99%;
+        display: block;
+        margin-top: 2%;
+        padding-bottom: 4%;
+    }
+}
+
+/*DESKTOP*/
+    
+@media screen and (min-width:1024px) {
+    div.second_row div.vertical_pink_box {
+        background-color: #E3D8E3;
+        width: 30%;
+        display: inline-block;
+        margin: 1%;
+    }
+}
 
     .vertial_main_title {
-        width: 255px;
+        width: 100%;
         background: linear-gradient(rgb(104, 102, 102), lightgray);
         height: 50px;
         font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -132,8 +246,7 @@ div.main_content {
     }
 
 div.footer {
-    width: 900px;
-    height: 60px;
+    width: 100%;
     background-color: lightgray;
     font-family: Arial, sans-serif;
 }
